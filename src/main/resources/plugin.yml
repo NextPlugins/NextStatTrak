@@ -1,4 +1,0 @@
-name: NextStatTrak
-version: @version@
-main: com.nextplugins.stattrak.NextStatTrak
-api-version: 1.16

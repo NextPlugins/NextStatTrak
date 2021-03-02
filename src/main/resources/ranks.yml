@@ -1,0 +1,19 @@
+ranks:
+  rank1: # identificador
+    name: '&aAssassino Aprendiz' # nome do rank
+    deathsRequired: 10 # quantidade de kills que o usuário precisa ter para chegar a este rank
+    prizes:
+      - 'COMMAND:crates give $player 1'
+      - 'COMMAND:say O jogador $player chegou ao rank $rank'
+  rank2:
+    name: '&aAssassino'
+    deathsRequired: 25
+    prizes:
+      - 'COMMAND:crates give $player 2'
+      - 'COMMAND:say O jogador $player chegou ao rank $rank'
+  rank3:
+    name: '&aAssassino em série'
+    deathsRequired: 50
+    prizes:
+      - 'COMMAND:crates give $player 3'
+      - 'COMMAND:say O jogador $player chegou ao rank $rank'
