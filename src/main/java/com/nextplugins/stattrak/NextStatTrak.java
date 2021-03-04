@@ -1,7 +1,9 @@
 package com.nextplugins.stattrak;
 
 import com.nextplugins.stattrak.configuration.ConfigurationManager;
+import com.nextplugins.stattrak.listener.PlayerKillListener;
 import com.nextplugins.stattrak.manager.RanksManager;
+import com.nextplugins.stattrak.manager.StatTrakManager;
 import lombok.Getter;
 import me.bristermitten.pdm.PluginDependencyManager;
 import org.bstats.bukkit.Metrics;
@@ -17,6 +19,8 @@ public final class NextStatTrak extends JavaPlugin {
     private static final int PLUGIN_ID = 10536;
 
     @Getter private final RanksManager ranksManager = new RanksManager();
+    @Getter private final StatTrakManager statTrakManager = new StatTrakManager();
+
     private FileConfiguration ranksConfig;
 
     @Override
@@ -33,7 +37,11 @@ public final class NextStatTrak extends JavaPlugin {
             try {
 
                 ranksManager.loadRanks(this.ranksConfig);
+                statTrakManager.init();
+
                 configureBStats();
+
+                Bukkit.getPluginManager().registerEvents(new PlayerKillListener(statTrakManager), this);
 
                 getLogger().info("Plugin inicializado com sucesso!");
 

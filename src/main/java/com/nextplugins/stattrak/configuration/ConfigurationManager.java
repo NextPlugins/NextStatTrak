@@ -33,7 +33,7 @@ public final class ConfigurationManager {
     /**
      * Get {@link File} by config file name
      *
-     * @return {@link File} finded in folder by name
+     * @return {@link File} found in folder by name
      */
     public File getFile() {
 

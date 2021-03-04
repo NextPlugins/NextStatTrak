@@ -1,0 +1,10 @@
+plugin:
+  configuration:
+    item:
+      permitted-items:
+        - 'DIAMOND_SWORD'
+        - 'IRON_SWORD'
+        - 'DIAMOND_AXE'
+        - 'IRON_AXE'
+      # linha que será adicionada à lore do item
+      lore: '&aVítimas com esta arma:&f $victims'
